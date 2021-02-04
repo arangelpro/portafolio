@@ -1,0 +1,95 @@
+.contact {	
+	color: var(--color-light);	
+}
+
+.contact .container {
+	background-color: var(--color-secundary);
+	border-left: 25px solid var(--color-secundary);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.social {
+	margin-right: 50px;  
+}
+  
+.social-link {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 0 25px;
+	background-size: 60px 60px;
+}
+  
+.social-link.twitter {
+	background-image: url('../images/twitter.svg');
+}
+.social-link.facebook {
+	background-image: url('../images/facebook.svg');
+}
+.social-link.github {
+	background-image: url('../images/github.svg');
+}
+.social-link.instagram {
+	background-image: url('../images/instagram.svg');
+}
+  
+.form-email {
+	margin-left: 60px;
+	padding: 40px 0;
+}
+.form-email input {
+	border-color: gray;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px 20px 10px 25px;
+	background-image: url('../images/envelope.svg');
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 5px;
+	width: 100%
+}
+  
+.form-email button {
+	display: block;
+	background: transparent;
+	color: white;
+	border: 1px solid var(--color-light);
+	padding: 10px 0;
+	border-radius: 5px;
+	width: 100px;
+	margin-top: 10px;  
+}
+  
+.form-email h3 {
+	font-family: var(--font-secundary);
+	color: white;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.semi-rectangle {
+	position: relative;
+}
+.semi-rectangle::before {
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-color: white;
+	border-width: 40px 12.5px;
+    top: 0;
+    left: -25px;
+}
+  
+.contact .semi-rounded-large {
+	overflow: visible;
+	margin-bottom: 10px;
+}
+.contact .semi-rounded-large h3 {
+	margin: 0;
+}
+.contact .semi-rounded-large:before {
+	border-color: white;
+	left: -60px;
+}

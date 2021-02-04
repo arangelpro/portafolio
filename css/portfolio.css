@@ -1,0 +1,40 @@
+.portfolio .container {
+	background: var(--color-light);	
+	border-left: 25px solid var(--color-secundary);
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+.portfolio .project {
+	border-radius: 10px;
+	margin: 0 40px 15px 20px;
+	padding: 30px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
+  }
+.portfolio .project-course,
+.portfolio .project-date,
+.portfolio .project-url {
+	margin: 10px 0;
+}
+.portfolio .project-description {
+	font-size: 20px;
+	text-align: justify;
+}
+.portfolio .project strong {
+	font-family: var(--font-primary);
+}
+.portfolio .project-title {
+	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.portfolio .project-details {
+	width: 500px;
+}
+  
+.portfolio .project-imageContainer {
+	width: 500px;
+}
