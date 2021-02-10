@@ -15,6 +15,7 @@
 </head>
 
 <body>
+	<i class="icon-menu burger-button" id="burger-menu"></i>
 	<header class="header">
 		<nav class="container">
 			<a href="/" class="logo"><strong>Anthony</strong>Rangel</a>
@@ -23,7 +24,7 @@
 					<a href="#portfolio">Portafolio</a>
 				</li>
 				<li>
-					<a class="link btn" href="#contact">Trabajemos juntos</a>
+					<a id="btn-contact" class="link btn" href="#contact">Trabajemos juntos</a>
 				</li>
 			</ul>
 		</nav>
@@ -35,7 +36,7 @@
 				<br />
 				amante de la <strong>Tecnología</strong>
 			</h1>
-			<img class="hero-image" src="images/hero.jpg" width="450" height="300" alt="imagen principal del sitio">
+			<img class="hero-image" src="images/hero.jpg" alt="imagen principal del sitio">
 		</div>
 	</section>
 	<main>
@@ -103,10 +104,10 @@
 					<button>Enviar</button>
 				</form>
 				<div class="social">
-					<a href="https://twitter.com/arangelpro" class="social-link twitter"></a>
-					<a href="https://facebook.com/arangelpro" class="social-link facebook"></a>
-					<a href="https://github.com/arangelpro" class="social-link github"></a>
-					<a href="https://instagram.com/arangelpro" class="social-link instagram"></a>
+					<a href="https://twitter.com/arangelpro" class="social-link"><i class="icon-twitter"></i></a>
+					<a href="https://facebook.com/arangelpro" class="social-link"><i class="icon-facebook"></i></a>
+					<a href="https://github.com/arangelpro" class="social-link"><i class="icon-github"></i></a>
+					<a href="https://instagram.com/arangelpro" class="social-link"><i class="icon-instagram"></i></a>
 				</div>
 			</div>
 		</section>
@@ -120,6 +121,41 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		// console.log('Hola mundo! es mi primera linea en JS');
+		const ipad = window.matchMedia('screen and (max-width: 767px)')
+		const menu = document.querySelector('.menu');
+		// console.log(menu);
+		const burgerButton = document.querySelector('#burger-menu');
+		const borderButton = document.querySelector('#btn-contact');
+		// console.log(burgerButton);
+
+
+		ipad.addListener(validation)
+
+		function validation(event) {
+			if (event.matches) {
+				borderButton.classList.remove('border');
+				burgerButton.addEventListener('click', hideShow);
+			} else {
+				borderButton.classList.add('border');
+				burgerButton.removeEventListener('click', hideShow);
+				if (menu.classList.contains('is-active')) {
+					menu.classList.remove('is-active');
+				}
+			}
+		}
+		validation(ipad);
+
+
+		function hideShow() {
+			if (menu.classList.contains('is-active')) {
+				menu.classList.remove('is-active');
+			} else {
+				menu.classList.add('is-active');
+			}
+		}
+	</script>
 </body>
 
 </html>

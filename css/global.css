@@ -8,9 +8,52 @@
 	--font-primary: 'Fjalla One', sans-serif; 
 }
 
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?bqb2fe');
+	src:  url('../fonts/icomoon.eot?bqb2fe#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?bqb2fe') format('truetype'),
+		url('../fonts/icomoon.woff?bqb2fe') format('woff'),
+		url('../fonts/icomoon.svg?bqb2fe#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+	content: "\e9bd";
+}
+
+.icon-facebook:before {
+	content: "\ea91";
+  }  
+.icon-twitter:before {
+	content: "\ea96";
+}  
+.icon-github:before {
+	content: "\eab0";
+}
+.icon-instagram:before {
+	content: "\ea92";
+}
+
 body {
 	font-family: var(--font-secundary);
 	margin: 0;
+	min-height: 100vh;
 }
 
 a {
@@ -36,7 +79,7 @@ h6{
   margin: 0;
 }
 
-.btn {
+.border {
 	padding: 5px 30px;
 	border: 1px solid var(--color-light);
 	height: unset;
@@ -44,7 +87,7 @@ h6{
 }
 
 .container {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -59,29 +102,36 @@ h6{
 	height: 40px;
 	position: relative;
 	margin-bottom: 40px;
-	overflow: hidden;
 }
 .semi-rounded h2, .semi-rounded-large h2 {
 	margin: 0;
-	margin-left: 50px;
+	font-size: 1.2em;
 }
 
-.semi-rounded::before {
-	content: "";
-	position: absolute;
-	border-style: solid;
-	border-color: var(--color-secundary);;
-	border-width: 19px 25px;
-	border-radius: 0 45% 45% 0;
-	margin-left: -25px;
-  }
-  
-.semi-rounded-large::before {
-	content: "";
-	position: absolute;
-	border-style: solid;
-	border-color: var(--color-secundary);
-	border-width: 20px 25px;
-	border-radius: 0 45% 45% 0;
-	margin-left: 0px;
+@media screen and (min-width: 768px) {
+	.semi-rounded, .semi-rounded-large {
+		overflow: hidden;
+	}
+	.semi-rounded h2, .semi-rounded-large h2 {
+		margin-left: 50px;
+	}
+	.semi-rounded::before {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-color: var(--color-secundary);;
+		border-width: 19px 25px;
+		border-radius: 0 45% 45% 0;
+		margin-left: -25px;
+	}
+
+	.semi-rounded-large::before {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-color: var(--color-secundary);
+		border-width: 20px 25px;
+		border-radius: 0 45% 45% 0;
+		margin-left: 0px;
+	}
 }

@@ -4,38 +4,19 @@
 
 .contact .container {
 	background-color: var(--color-secundary);
-	border-left: 25px solid var(--color-secundary);
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 }
-.social {
-	margin-right: 50px;  
-}
-  
+
 .social-link {
-	display: inline-block;
-	width: 60px;
-	height: 60px;
-	margin: 0 25px;
-	background-size: 60px 60px;
+	margin: 0 10px;
+	width: 40px;
+	height: 40px;
 }
-  
-.social-link.twitter {
-	background-image: url('../images/twitter.svg');
-}
-.social-link.facebook {
-	background-image: url('../images/facebook.svg');
-}
-.social-link.github {
-	background-image: url('../images/github.svg');
-}
-.social-link.instagram {
-	background-image: url('../images/instagram.svg');
-}
-  
+    
 .form-email {
-	margin-left: 60px;
 	padding: 40px 0;
 }
 .form-email input {
@@ -48,7 +29,8 @@
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-position-x: 5px;
-	width: 100%
+	box-sizing: border-box;
+	width: 100%;
 }
   
 .form-email button {
@@ -59,7 +41,7 @@
 	padding: 10px 0;
 	border-radius: 5px;
 	width: 100px;
-	margin-top: 10px;  
+	margin: 10px auto;
 }
   
 .form-email h3 {
@@ -68,20 +50,16 @@
 	margin: 0;
 	margin-bottom: 10px;
 }
+.social {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+.icon-facebook, .icon-twitter, .icon-github, .icon-instagram {
+	color: white;
+	font-size: 40px;
+}
 
-.semi-rectangle {
-	position: relative;
-}
-.semi-rectangle::before {
-	content: "";
-	position: absolute;
-	border-style: solid;
-	border-color: white;
-	border-width: 40px 12.5px;
-    top: 0;
-    left: -25px;
-}
-  
 .contact .semi-rounded-large {
 	overflow: visible;
 	margin-bottom: 10px;
@@ -92,4 +70,48 @@
 .contact .semi-rounded-large:before {
 	border-color: white;
 	left: -60px;
+}
+
+@media screen and (min-width: 768px) {
+	.contact .container {
+		flex-direction: row;
+		justify-content: space-between;
+		border-left: 25px solid var(--color-secundary);
+		margin: 0 20px;
+	}
+	.form-email {
+		margin-left: 60px;
+	}
+	.form-email button {
+		margin: 10px 0 0;
+	}
+	.social {
+		margin-right: 50px;  
+	}
+	.social-link {
+		width: 50px;
+		height: 50px;
+	}
+	.icon-facebook, .icon-twitter, .icon-github, .icon-instagram {		
+		font-size: 50px;
+	}
+	.semi-rectangle {
+		position: relative;
+	}
+	.semi-rectangle::before {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-color: white;
+		border-width: 40px 12.5px;
+		top: 0;
+		left: -25px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.contact .container {
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
 }

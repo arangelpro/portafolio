@@ -1,40 +1,100 @@
 .portfolio .container {
-	background: var(--color-light);	
-	border-left: 25px solid var(--color-secundary);
-	padding-top: 40px;
-	padding-bottom: 20px;
+	background: var(--color-light);
+	padding: 20px;
+	box-sizing: border-box;
 }
 .portfolio .project {
 	border-radius: 10px;
-	margin: 0 40px 15px 20px;
-	padding: 30px;
+	padding: 20px;
 	background: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
-  }
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.portfolio .project-course {
+	font-size: 0.7em;
+}
+.portfolio .project-date, .portfolio .project-url, .portfolio .project-description {
+	font-size: 1em;
+}
 .portfolio .project-course,
 .portfolio .project-date,
 .portfolio .project-url {
-	margin: 10px 0;
+	margin: 0.3em 0;
+}
+
+.portfolio .project-url a{
+	color: black;
 }
 .portfolio .project-description {
-	font-size: 20px;
 	text-align: justify;
 }
 .portfolio .project strong {
 	font-family: var(--font-primary);
 }
 .portfolio .project-title {
-	font-size: 30px;
-	margin-top: 0;
-	margin-bottom: 10px;
+	font-size: 1.5em;
+	margin-bottom: 0.3em;
 }
 .portfolio .project-details {
-	width: 500px;
+	width: auto;
 }
   
 .portfolio .project-imageContainer {
-	width: 500px;
+	margin: 0;
+	width: auto;
+}
+
+.portfolio .project-imageContainer img {
+	max-width: 100%;
+}
+@media screen and (min-width:768px) {
+	.portfolio .container {
+		border-left: 25px solid var(--color-secundary);
+		padding: 0;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		margin: 0 20px;
+	}
+	.portfolio .project {
+		border-radius: 10px;
+		margin: 0 40px 15px 20px;
+		padding: 30px;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
+	}
+	.portfolio .project-title {
+		font-size: 30px;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.portfolio .project-description {
+		font-size: 20px;
+	}
+
+	.portfolio .project-course {
+		font-size: 0.8em;
+	}
+	.portfolio .project-date, .portfolio .project-url, .portfolio .project-description {
+		font-size: 1.1em;
+	}
+
+	.portfolio .project-details {
+		width: 50%;
+	}
+	.portfolio .project-imageContainer {
+		width: 50%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.portfolio .container {
+		margin: 0 auto;
+	}
 }
